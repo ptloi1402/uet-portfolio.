@@ -925,7 +925,7 @@
         target.innerHTML = '<p class="fallback">Chưa có dữ liệu xem trước cho tài liệu này.</p>';
         return;
       }
-      target.innerHTML = '<p class="pdf-page-note">Bản xem trước được render thành ảnh để hiển thị ổn định trên GitHub Pages.</p>' +
+      target.innerHTML = '<p class="pdf-page-note">Bản xem trước .</p>' +
         pages.map((src, i) => `<img class="pdf-page-img" src="${src}" alt="${(pdfLabels[file] || file)} - trang ${i + 1}" loading="lazy">`).join('');
     }
 
@@ -1002,7 +1002,7 @@
         </div>
         <div class="pdf-shell">
           <div class="pdf-frame" title="${title}"></div>
-          <p class="fallback">Bản xem trước được render thành ảnh nên không bị trắng trên GitHub Pages. Nếu muốn dùng nút Open/Download, hãy upload kèm PDF gốc cùng thư mục.</p>
+          <p class="fallback">Bản xem trước.</p>
         </div>
       `;
       renderPdfImages(panel.querySelector('.pdf-frame'), file);
